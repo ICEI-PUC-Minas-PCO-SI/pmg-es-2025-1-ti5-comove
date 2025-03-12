@@ -10,12 +10,12 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Integrantes
 
-* Nome completo do aluno 1
+* Eliezer Júnio Ribeiro Temperani
 * Lucas Gontijo da Cunha
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Mateus Augusto Ramos Lopes
+* Pedro Turibio Reis Loiola
+* Victor Ferreira Resende
+* Vinicius Costa Reis
 
 ## Professor
 
