@@ -6,7 +6,10 @@
 
 `1º semestre/2025`
 
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+O projeto “Comove” trata-se de um sistema web que servirá como um programa de carona solidária entre os alunos, funcionários e servidores da PUC Minas na região metropolitana de Belo Horizonte. Através dele, os usuários poderão economizar tempo e dinheiro ao utilizarem o nosso sistema, pois não precisaram ficar um longo período de tempo esperando ônibus, por exemplo, e não será necessário utilizar aplicativos de corrida como Uber e 99Pop.
+
+O motorista poderá criar uma carona de acordo com o local em que está se dirigindo e terá a liberdade de aceitar ou não o passageiro dependendo das especificações do mesmo como avaliação e local onde reside. Nosso sistema contará também com uma funcionalidade para as mulheres, onde poderá ser filtrado para que apareça somente caronas fornecidas por motoristas mulheres, garantindo dessa forma, maior segurança e conforto. 
+
 
 ## Integrantes
 
