@@ -10,7 +10,6 @@ Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
 
 ## Integrantes
 
-* Eliezer Júnio Ribeiro Temperani
 * Lucas Gontijo da Cunha
 * Mateus Augusto Ramos Lopes
 * Pedro Turibio Reis Loiola
