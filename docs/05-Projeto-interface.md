@@ -26,17 +26,13 @@ Fluxo de usuário (user flow) é uma técnica que permite ao desenvolvedor mapea
 
 ## Wireframes
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
-
-São protótipos usados no design de interface para sugerir a estrutura de um site web e seu relacionamento entre suas páginas. Um wireframe web é uma ilustração que mostra o layout dos elementos fundamentais na interface.
-
 **✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
+![alt text](images/prototipo1.png)
+Protótipo da imagem da tela home
 
-Descrição para a tela XPTO
-
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+![alt text](images/loginprototipo.png) 
+Protótipo da tela de login
 
  
 > **Links úteis**:
@@ -50,10 +46,10 @@ Descrição para a tela XPTO
 
 ### Protótipo Interativo
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Um protótipo interativo apresenta o projeto das interfaces e permite ao usuário navegar pelas funcionalidades como se estivesse utilizando o software finalizado. Utilize as mesmas ferramentas de criação de wireframes para a montagem do seu protótipo interativo. Inclua o link para o protótipo interativo do projeto.
-
 **✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
 
-✅ [Protótipo interativo](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
+![alt text](images/login.png) 
+Imagem da tela de login  
+
+![alt text](images/interativo.png)
+Imagem da tela home
