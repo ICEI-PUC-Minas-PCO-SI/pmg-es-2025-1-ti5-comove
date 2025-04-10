@@ -10,7 +10,6 @@
 
 
 > * **Matriz CSD**: ![Matriz CSD](images/./matriz%20de%20alinhamento.png)
-
 > * **Mapa de stakeholders**: ![Mapa de stakeholders](images/./mapa%20de%20stakeholders.png)
 > * **Entrevistas qualitativas**: ![Entrevistas qualitativas](images/./ent1.png)![Entrevistas qualitativas](images/./ent2.png)![Entrevistas qualitativas](images/./ent3.png)
 > * **Highlights de pesquisa**: ![Highlights de pesquisa](images/./highlights%20de%20pesquisa.png)
@@ -24,12 +23,17 @@
 
 **✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
+
 >
-> Deve-se relacionar as personas identificadas no projeto, juntamente com os respectivos mapas de empatia. É importante enumerar e descrever de maneira precisa e personalizada todos os principais envolvidos na solução pretendida.
+> * **Personas**: ![Exemplo de persona](images/persona%20(1).jpg)
+![Exemplo de persona](images/persona%20(2).jpg)
+![Exemplo de persona](images/persona%20(3).jpg)
+![Exemplo de persona](images/persona%20(4).jpg)
+![Exemplo de persona](images/persona%20(5).jpg)
+![Exemplo de persona](images/persona%20(6).png)
 
 
-![Exemplo de persona](images/exemplo-persona.png)
+
 
 
 > **Links úteis**:
