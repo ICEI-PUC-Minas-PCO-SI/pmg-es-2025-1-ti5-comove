@@ -1,43 +1,43 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Nós somos o CoMoVe, sistema desenvolvido pensando na criação de uma carona solidária relacionada a Puc, ou seja, uma carona de ida para a PUC ou de volta da PUC para casa. Projeto que seria de grande valia para estudantes e funcionários da Universidade. 
 
 ## Problema
-Aqui, a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+O principal problema que nós encontramos é o deslocamento, visto que muitos alunos e funcionários dependem de 1 ou mais transportes públicos para chegarem à puc, o nosso projeto por ser totalmente sem fins lucrativos, além de economizar nos custos, economizaria também no tempo de trajeto.
 
-O grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite uma visão completa do problema.
+Além desse problema, também existe quem é dependente de aplicativos de viagem, que além de serem mais caros que o transporte público, se torna uma dependencia estressante, pois pode encontrar uma demora para encontrar um motorista parceiro e pode ser que esse motorista esteja muito longe da sua localidade, levando a uma demora ainda maior. Além dos preços serem dinâmicos, portanto, em um dia uma viagem pode custar um preço X e em outro custar ainda mais caro. O CoMoVe se apresenta como uma alternativa interessante não apenas na redução de custos, mas também nesse estresse causado pelos apps.
 
-> **Links úteis**:
-> - [Objetivos, problema de pesquisa e justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz certezas, suposições e dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+O contexto do projeto é focado é voltado para a faculdade, toda carona obrigatoriamente deve ter um ponto comum de início ou fim na PUC. 
 
 ## Objetivos
 
-Aqui, você deve descrever os objetivos do trabalho, indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima.
+OBJETIVO GERAL: Proporcionar aos estudantes e colaboradores da PUC Minas, na região metropolitana de Belo Horizonte, uma forma solidária, gratuita e colaborativa de compartilhar caronas.
 
-Além disso, apresente alguns (pelo menos 3) objetivos específicos, dependendo de onde você pretende concentrar sua prática investigativa ou como deseja aprofundar seu trabalho.
+OBJETIVOS Específicos:
+
+-Facilitar o compartilhamento de caronas entre membros da comunidade da PUC Minas;
+
+-Reduzir os custos com transporte para estudantes e colaboradores da universidade, oferecendo uma alternativa gratuita aos aplicativos pagos e ao transporte público;
+
+-Diminuir a dependência de aplicativos de mobilidade convencionais, diminuindo o estresse e os custos;
+
+-Otimizar o tempo de deslocamento dos usuários, ao oferecer caronas diretas ou com desvios mínimos (máximo de 2 km da rota do motorista);
+
+-Fomentar a criação de vínculos sociais e amizades entre os membros da comunidade acadêmica da PUC Minas, por meio da interação promovida durante o compartilhamento de caronas;
+
+-Promover a sustentabilidade, incentivando o uso compartilhado de veículos e, consequentemente, a redução do número de carros circulando individualmente.
  
-> **Links úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O CoMoVe surgiu muito pela necessidade vivida por alguns alunos da PUC Minas, incluindo um dos idealizadores, de conseguir uma forma fácil e prática para se deslocar até a Universidade. Muitos membros da comunidade acadêmica moram longe de seus Campus e não contam com meios de transporte de fácil acesso. Portanto, esse projeto seria de muita valia para essas pessoas, oferecendo uma solução solidária para o deslocamento diário. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Além do benefício prático, o sistema também visa promover a integração entre os usuários, incentivando a criando vínculos afetivos entre motorista e passageiros. Para alunos novatos na instituição, pode ser uma ótima maneira de se inserir no ambiente universitário e fazer novas amizades, seja com veteranos ou outros calouros.
 
 ## Público-alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação, mas sim oferecer uma visão detalhada do perfil de cada grupo de usuários. Isso inclui informações sobre seu nível de conhecimento prévio, familiaridade com tecnologia, e suas relações hierárquicas ou contextos de uso. Dessa forma, será possível entender melhor as necessidades e expectativas dos diferentes tipos de usuários, garantindo uma experiência mais eficiente e adaptada.
+O público-alvo desse sistema são os alunos e funcionários das unidades da PUC Minas na região metropolitana.
 
-> **Links úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público-alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+-Estudantes: possuem um nível de conhecimento tecnológico moderado a alto, que precisam se deslocar para alguma unidade da PUC e estes buscam no aplicativo uma alternativa mais confortável e economica de encontrar isso, acreditamos ter uma idade entre 17 e 50 anos.
+
+-Funcionários: um perfil menos numeroso, mas de características mais abrangentes e abstratas, com um nível de conhecimento tecnológico muito variado, alguns podendo encontrar mais dificuldade com sistemas novos. Podem oferecer caronas na ida ou volta e se beneficiar evitando o trânsito, buscam praticidade, segurança e a possibilidade de ajudar estudantes ou colegas de trabalho no deslocamento
