@@ -12,14 +12,26 @@ Neste momento, transformam-se os insights e validações obtidos em soluções t
 
 Com base na análise das personas, foram identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
+|EU COMO... `Passageiro`| QUERO/PRECISO ... `Avaliar Minhas Corridas` |PARA ... `Manter a qualidade do serviço`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas  ⚠️ EXEMPLO ⚠️         | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões        ⚠️ EXEMPLO ⚠️         | Permitir que possam administrar contas |
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
+|EU COMO... `Passageiro`| QUERO/PRECISO ... ` informações do veículo e do motorista antes de iniciar a corrida` |PARA ... `saber de estou entrando no carro correto e com o motorista certo`                 |
+|--------------------|------------------------------------|----------------------------------------|
 
-Apresente aqui as histórias de usuários que são relevantes para o projeto da sua solução. As histórias de usuários consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuários por contexto, para facilitar consultas recorrentes a esta parte do documento.
+|EU COMO... `Passageiro`| QUERO/PRECISO ... `cadastrar minhas informações` |PARA ... `facilitar a minha identificação para o motorista`                 |
+|--------------------|------------------------------------|----------------------------------------|
+
+|EU COMO... `Motorista`| QUERO/PRECISO ... `Poder cancelar uma carona` |PARA ... `Em caso de atraso do passageiro`                 |
+|--------------------|------------------------------------|----------------------------------------|
+
+|EU COMO... `Motorista`| QUERO/PRECISO ... `Avaliar os passageiros` |PARA ... `Poder compartilhar a minha experiência com os outros motoristas`                 |
+|--------------------|------------------------------------|----------------------------------------|
+
+|EU COMO... `Motorista`| QUERO/PRECISO ... `Poder bloquear passageiros com nota baixa` |PARA ... `E vitar passar por situações negativas ao usar o sistema`                 |
+|--------------------|------------------------------------|----------------------------------------|
+
+
+
 
 > **Links úteis**:
 > - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
@@ -35,12 +47,10 @@ Apresente aqui as histórias de usuários que são relevantes para o projeto da 
 
 ##### Proposta para a persona XPTO ⚠️ EXEMPLO ⚠️
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+![proposta de valor] ![alt text](Proposta-de-Valor.jpg) 
+![alt text](<Proposta de Valor 2.png>)
 
-> ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
-> O mapa da proposta de valor é uma ferramenta que auxilia na definição do tipo de produto ou serviço que melhor atende às personas previamente estabelecidas.
-
 
 > **Links úteis**:
 > - [O que é o canvas da proposta de valor e como usar?](https://www.youtube.com/watch?v=Iqb-8Q_eiiA)
@@ -53,15 +63,36 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
+| RF-001 | No sistema, poderá haver pagamento pela carona, porém, será opcional do usuário realizá-lo ou não⚠️ | MEDIA      | 
+| RF-002 | Haverá na tela inicial do usuário alguns filtros que servirão para exibir somente as caronas que se aplicam àquelas características informadas⚠️ | ALTA    
+| RF-003 | Para usuários que são motoristas, aparecerá na tela principal, o histórico de caronas realizadas em um período específico que será discutido pela equipe⚠️ | MEDIA
+ | RF-004 | O sistema terá um limite de distância para o desvio de rota, pois, caso a distância se altere muito, a carona perde o sentido ⚠️ | ALTA
+| RF-005 | Ao realizar o primeiro login, será solicitado aos usuários algumas informações complementares para comporem o seu perfil (exemplo: data de nascimento, nome completo, etc)⚠️ | MEDIA
+| RF-006 | Para o usuário motorista, haverá um botão na página inicial onde será possível criar uma carona. Ao aperta-lo, serão necessárias as seguintes informações: ponto de partida, ponto de destino, horário da carona e quantidade de vagas ⚠️ | ALTA
+| RF-007 | Para as mulheres que utilizarão o nosso sistema, será possível selecionar caronas que serão feitas somente por motoristas mulheres, dessa forma, conseguimos de forma indireta, garantir um pouco mais de segurança e passar credibilidade;⚠️ | ALTA
+| RF-008 | O sistema permitirá que os usuários avaliem as caronas realizadas, atribuindo uma nota e deixando um comentário opcional, ajudando a construir um histórico de confiabilidade para motoristas e passageiros⚠️ | ALTA
+| RF-009 | A nota do usuário aparecerá em formato pop-up juntamente com as informações relevantes daquele perfil | BAIXA
+| RF-010 | Utilizaremos alguma api de mapas para podermos acompanhar o trajeto do motorista até o nosso ponto de encontro e posteriormente até o destino final (iremos consumi-la pelo front-end)| ALTA
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Requisitos não funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em dispositivos móveis ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar as requisições do usuário em no máximo 3 segundos ⚠️ EXEMPLO ⚠️          | BAIXA      |
+| RNF-001 | O sistema deverá ser responsivo e funcionar em diferentes navegadores de forma adequada  | MÉDIA     |
+| RNF-002 | O código deve ser feito de forma adequada: indentação, padrões de nomenclatura para as variáveis, etc.   | ALTA      |
+
 
 > ⚠️ **APAGUE ESTA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
