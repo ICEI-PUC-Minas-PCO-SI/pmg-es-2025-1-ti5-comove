@@ -6,36 +6,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px; /* altura fixa do header */
-  overflow: hidden; /* evita que a imagem "transborde" */
+  height: 100px; 
+  overflow: hidden; 
 }
 
+/* Logo */
+
 .logo-img {
-  max-height: 200px; /* limita o tamanho da logo sem crescer o header */
+  max-height: 200px; 
   height: auto;
   width: auto;
 }
-
-
-/*Quando o usuário clica no CoMoVe, volta para a página inicial
-.logo-link {
-  text-decoration: none;
-  color: inherit; /* mantém a cor original 
-  margin: 30px;
-}*/
 
 .logo-link:hover {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
-
-/* Rodapé */
-footer {
-  background-color: rgba(22, 156, 40, 0.877);
-  color: white;
-}
-
-/* Botão do cabeçalho */
+/* Botões de regulamento e histórico do cabeçalho */
 #botao-header {
   background-color: rgba(22, 156, 40, 0.877);
   color: white;
@@ -106,6 +93,8 @@ footer {
   border-radius: 4px 0 0 4px;
 }
 
+Por enquanto não precisa ser usado
+
 .search-form button {
   padding: 5px 10px;
   border: none;
@@ -160,6 +149,7 @@ footer {
   text-align: center;
 }
 
+/*ajustando o texto e as imagens das regras*/
  .regras-container {
   display: flex;
   align-items: center;
@@ -186,6 +176,7 @@ footer {
 }
 
 
+/*ajustando o texto e as imagens das regras dos passageiros*/
  .passageiro-container {
   display: flex;
   align-items: center;
@@ -206,7 +197,8 @@ footer {
   flex-shrink: 0;
 }
 
-/*motorista*/
+
+/*ajustando o texto e as imagens das regras dos motoristas*/
 
  .motorista-container {
   display: flex;
