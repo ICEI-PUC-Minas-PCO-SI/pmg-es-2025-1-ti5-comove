@@ -1,78 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/login.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="banner">
-        <img src="./assets/images/banner_ti.png" alt="" />
-      </div>
-      <div class="barra-info">
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Sobre nós</a></li>
-          </ul>
-        </nav>
-        <div class="dados-usuario">
-          <span id="userInfo"></span>
-        </div>
-      </div>
-    </header>
-    <main>
-        <h3>Boas vindas</h3>
-        <p>Sejam bem-vindos à home-page do projeto de TI 1 - Trabalho
-        Interdisciplinar</p>
-        <p>Esse conteúdo que você está lendo foi criado para exemplificar como
-        criar o seu site integrado com o ambiente de login e o back end que
-        utiliza o JSON Server.</p>
-        <p>Ao criar o seu site, você deve adaptar esse código para sua neessidade ou começar do zero, excluindo todo esse conteúdo.
-        </p>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoMoVe</title>
 
-        <h3>Arquivos do site (Front End)</h3>
-        <p>Para montar seu site, edite os arquivos existentes e crie novos arquivos na pasta <code>public</code> que mantem todos os arquivos da parte de Front End do site, a interface que é vista pelo usuário no navegador.</p>
+  <!-- Google Maps API com Places -->
+ <script async defer 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTE04gg5LzL0aeABwfAEo2hO4kZNcBa_M&libraries=places&callback=initMap">
+</script>
 
-        <p>Nesta pasta <code>public</code>, sugerimos que você organize os arquivos do seu site da seguinte maneira:</p>
-        <ul>
-            <li><strong>Pasta <code>assets</code></strong>: os arquivos de formatação (CSS), os scripts (JS), as imagens utilizadas no site (JPG, PNG, GIF, SVG, etc), fontes (TTF) e outros arquivos gerais utilizados por todo o site.</li>
-            <li><strong>Pasta <code>modulos</code></strong>: os arquivos utilizados na implementação das funcionalidades do site. Separe uma sub-pasta para cada novo módulo ou funcionalidade. Pode também ser utilizado para dividir o trabalho de cada membro do grupo.</li>
-            <li><strong>Arquivo <code>index.html</code></strong>: arquivo que representa a "home page" do site.</li>
-        </ul>
+  <!-- Bootstrap e estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 
-        <h3>Módulo de Login</h3>
-        <p>O módulo de login de usuário traz uma funcionalidade completa de registro de usuários e validação de login e senha.</p>
-        <h4>Integração do site com módulo de Login</h4>
-        <p>Para utilizar o módulo de login, basta incluir o script na sua página colocando a seguinte tag no HEAD</p>
-        <pre>&lt;script src="./assets/js/login.js"&gt&lt;script&gt;</pre>
-        <p>Ao incluir o script de login na sua página, caso o usuário ainda não tenha efetuado login, ao acessar a home-page do site, o navegador será direcionado para o formulário de <strong>Identificação de Usuário</strong>. Se o usuário informar corretamente o login e a senha, o navegador será direcionado para a Home-Page.</p>
-        <h4>Sessão do usuário logado</h4>
-        <p>Assim que o usuário se identifica e acessa a parte privada do site, o módulo de login cria uma chave do sessionStorage do navegador com o título <strong>usuarioCorrente</strong> e cujo conteúdo é um objeto com os atributos: id, nome, login, senha e email. </p>
-        <h4>Base de dados de usuários</h4>
-        <p>Inicialmente o módulo de login é configurado com dois usuários: </p>
-        <ul>
-            <li>admin - Senha: 123</li>
-            <li>user - Senha: 123</li>
-        </ul>
+  <style>
+ #pac-input {
+  width: 250px;
+  margin-top: 10px;
+}
+     /*#map {
+      width: 100%;
+      height: 400px;
+    }*/
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header d-flex justify-content-between align-items-center p-3">
+    <div class="header-left d-flex align-items-center">
+    <a href="index.html" class="logo-link">
+  <img src="imagens/logonegativa.png" alt="Logo CoMoVe" class="logo-img" />
+</a>
+      <a href="historico.html" class="btn btn-light" id="botao-header">Histórico</a>
+        <a href="regulamento.html" class="btn btn-light" id="botao-reg">Regulamento</a>
+    </div>
+     <!-- <div class="header-right">
+      <form class="search-form d-flex" action="#" method="get">
+        <input type="text" placeholder="Buscar..." name="search" class="form-control me-2"/>
+        <button type="submit" class="btn btn-dark">🔍</button>
+      </form>
+    </div>-->
+  </header>
 
-        <h3>Servidor Web e API baseada no JSON Server (Back end)</h3>
-        <p>O ambiente de trabalho disponibilizado para suportar o Trabalho Interdisciplinar 1 é baseado no Node.js. A aplicação de back end utiliza o módulo JSON Server para criar um Servidor Web que prove duas estruturas separadas:
-        <ul>
-            <li><strong>Arquivos estáticos (Pasta <code>public</code>)</strong>: da acesso aos arquivos utilizados no front end (HTML, CSS e JavaScript).</li>
-            <li><strong>API RESTful (pasta <code>db</code>)</strong>: uma interface para acesso aos dados definidos no arquivo db.json.</li>
-        </ul></p>
+  <!-- Campo de busca do mapa -->
+  <div class="mt-2 d-flex justify-content-end">
+  <input id="pac-input" class="form-control me-5" type="text" placeholder="Buscar local..." />
+</div>
 
-        <h4>Arquitetura do site</h4>
-        <p>A imagem que se segue apresenta a arquitetura desse ambiente, mostrando as duas refletindo as pastas desse ambiente.</p>
-        <p><img class="img-fluid d-block w-75 m-auto" src="./assets/images/servidor.png" alt=""></p>
 
-        <h4>Arquivo db.json</h4>
-        <p>O arquivo JSON utilizado para definição das estruturas dos dados providos pela aplicação é localizado na pasta db e tem um formato como o mostrado no exemplo da figura a seguir. Esse arquivo define uma estrutura hipotética de contatos que descreve itens com os seguintes atributos: <code>id</code>, <code>nome</code> e <code>cidade</code>. para o JSON Server, é fundamental que toda estrutura tenha um atributo de identificador de nome <code>id</code>.</p>
-        <p><img class="img-fluid d-block w-50 m-auto" src="./assets/images/arquivo_json.png" alt=""></p>
-    </main>
-  </body>
+  <!-- Mapa -->
+  <div id="map"></div>
+
+  <!-- Formulário de parada -->
+  <div class="pesquisa container my-4">
+    <div class="formulario-parada">
+      <form id="formDesvio">
+        <input type="text" id="origem" placeholder="Endereço de origem" required class="form-control mb-2"/>
+        <input type="text" id="destino" placeholder="Endereço de destino" required class="form-control mb-2"/>
+        <input type="text" id="parada" placeholder="Adicione sua parada" required class="form-control mb-2"/>
+        <button type="submit" class="btn btn-dark">Verificar desvio</button>
+      </form>
+      <p class="mt-2">Adicione uma parada e espere a confirmação do motorista</p>
+      <p><strong>Lembre-se:</strong> sua parada não pode ultrapassar o limite do desvio de rota</p>
+    </div>
+  </div>
+
+<div class="informacoes-extras d-flex align-items-center justify-content-between">
+  <div class="texto">
+    <h2>Economize no trajeto para a faculdade</h2>
+    <p>Com o CoMoVe, as caronas são totalmente gratuitas</p>
+  </div>
+  <img src="imagens/carro_branco.png" alt="Carro branco" class="imagem-menor" />
+</div>
+
+<div class="regras-site d-flex align-items-center justify-content-between flex-row-reverse">
+  <div class="texto">
+    <h2>Regulamento</h2>
+    <p>Quer saber mais sobre as regras do CoMoVe? Clique no botão abaixo.</p>
+    <a href="regulamento.html" class="btn btn-light" id="botao-header">Saber mais</a>
+  </div>
+  <img src="imagens/estradaverde.png" alt="Estrada verde" class="imagem-menor" />
+</div>
+
+
+
+  <!-- Rodapé -->
+  <footer class="text-center py-3">
+    <p>CoMoVe, 2025 ©</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="map.js"></script>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

@@ -1,0 +1,236 @@
+/* Cabeçalho */
+header {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px; /* altura fixa do header */
+  overflow: hidden; /* evita que a imagem "transborde" */
+}
+
+.logo-img {
+  max-height: 200px; /* limita o tamanho da logo sem crescer o header */
+  height: auto;
+  width: auto;
+}
+
+
+/*Quando o usuário clica no CoMoVe, volta para a página inicial
+.logo-link {
+  text-decoration: none;
+  color: inherit; /* mantém a cor original 
+  margin: 30px;
+}*/
+
+.logo-link:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+
+/* Rodapé */
+footer {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+}
+
+/* Botão do cabeçalho */
+#botao-header {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  margin-left: 45px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#botao-reg {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  margin: 10px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* >>>>>>>>>>> INDEX <<<<<<<<<<<*/
+
+.pesquisa-mapa {
+  float: right;
+}
+
+#botao-header:hover {
+  background-color: #157d2a;
+  color: white;
+}
+
+/* Formulário e layout */
+.formulario-parada {
+  max-width: 400px;
+}
+
+.formulario-parada p {
+  margin: 30px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Layout da seção de pesquisa (formulário + mapa) */
+.container.d-flex {
+  gap: 30px;
+}
+
+/* Mapa responsivo com borda e cantos arredondados */
+#map {
+  float: right;
+  margin-right: 45px;
+  margin-bottom: 45px;
+  width: 500px;
+  height: 350px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+}
+
+/* Formulário de busca no header 
+.search-form input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-form button {
+  padding: 5px 10px;
+  border: none;
+  background-color: white;
+  color: rgba(22, 156, 40, 1);
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}*/
+
+.informacoes-extras,
+.regras-site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.informacoes-extras {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: right;
+  padding: 40px 20px;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.regras-site {
+  background-color: white;
+  color: rgba(22, 156, 40, 0.877);
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.imagem-menor {
+  width: 180px;
+  height: auto;
+}
+
+
+
+/*>>>>>>>>>>> SOBRE NÓS <<<<<<<<<<<*/
+
+  .regulamento{
+  color: rgba(22, 156, 40, 0.877);
+  margin-top: 30px;
+  text-align: center;
+}
+
+ .regras-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.regras-container .texto {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.regras-container .imagem {
+  flex-shrink: 0;
+}
+
+.imagem-menor {
+  width: 180px;
+  height: auto;
+}
+
+
+ .passageiro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.passageiro-container .texto {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.passageiro-container .imagem {
+  flex-shrink: 0;
+}
+
+/*motorista*/
+
+ .motorista-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.motorista-container .texto {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.motorista-container .imagem {
+  flex-shrink: 0;
+}
+
+/* Rodapé */
+footer {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  margin-top: 50px;
+}

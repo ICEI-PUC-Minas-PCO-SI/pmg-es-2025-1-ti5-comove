@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoMoVe - Histórico de Caronas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="header d-flex justify-content-between align-items-center p-3">
+    <div class="header-left d-flex align-items-center">
+    <a href="index.html" class="logo-link">
+  <img src="imagens/logonegativa.png" alt="Logo CoMoVe" class="logo-img" />
+</a>
+   <a href="regulamento.html" class="btn btn-light" id="botao-reg">Regulamento</a>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <h2 class="mb-4">Histórico de Caronas</h2>
+    <ul id="lista-caronas" class="list-group">
+      <!-- Itens serão inseridos via JavaScript -->
+    </ul>
+
+    <!-- Botão de voltar -->
+    <button class="btn btn-primary mt-4" onclick="window.history.back()">Voltar</button>
+  </main>
+
+  <!-- Script com tipo módulo para usar imports -->
+  <script type="module" src="app.js"></script>
+</body>
+
+ <!-- Rodapé -->
+  <footer class="text-center py-3">
+    <p>CoMoVe, 2025 ©</p>
+  </footer>
+
+</html>
