@@ -17,7 +17,6 @@ O motorista poderá criar uma carona de acordo com o local em que está se dirig
 * Mateus Augusto Ramos Lopes
 * Pedro Turibio Reis Loiola
 * Victor Ferreira Resende
-* Vinicius Costa Reis
 
 ## Professor
 
