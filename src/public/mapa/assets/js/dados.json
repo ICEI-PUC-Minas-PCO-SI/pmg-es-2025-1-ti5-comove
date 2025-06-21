@@ -1,0 +1,12 @@
+{
+    "trip": [
+        {
+            "id": 1,
+            "driver": "Fulano de tal",
+            "passenger": "Ciclano de tal",
+            "initialPoint": "Rua Barcelona, 33 - Bairo Sta. Cruz",
+            "lastPoint": "PUC Minas Contagem - CINCO",
+            "currentLocation": "Avenida Tupi, 1439 - Bairro Eldorado"
+        }
+    ]
+}

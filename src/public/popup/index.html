@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal do usuário</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="first-screen">
+        <h1>CoMove - Compartilhe Mobilidade e Movimento Coletivo</h1>
+        <button>Exibir Informações do usuário</button>
+    </div>
+
+    <dialog id="dialog">
+        <h1>Informações do perfil</h1>
+        <hr>
+
+        <div class="profile-info">
+            <div  class="profile-info-main">
+                <img src="./assets/img/user-icon.png" alt="Foto de perfil do usuário" class="profile-photo">
+                <div>
+                    <h2 id="nameH2"></h2>
+                    <h3 id="username"></h3>
+                </div>
+            </div>
+            
+            <div>
+                <ul class="avaliacao">
+                <li class="star-icon ativo" data-avaliacao="1"></li>
+                <li class="star-icon" data-avaliacao="2"></li>
+                <li class="star-icon" data-avaliacao="3"></li>
+                <li class="star-icon" data-avaliacao="4"></li>
+                <li class="star-icon" data-avaliacao="5"></li>
+            </ul>
+            </div>
+            
+        </div>
+
+        <p id="email"></p>
+        <hr>
+
+        <div class="close-button">
+            <button>Sair</button>
+        </div>
+    </dialog>
+</body>
+
+<script src="./assets/js/scripts.js"></script>
+</html>

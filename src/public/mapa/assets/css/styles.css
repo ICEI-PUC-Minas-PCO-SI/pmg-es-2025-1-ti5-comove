@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+}
+
+.first-screen {
+  border: 2px solid #000;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  width: 60%;
+}
+
+.map-image {
+    width: 50rem;
+    height: 24rem;
+    border-radius: 12px;
+}
+
+.profile-photo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.main-info {
+    display: flex;
+}
+
+.driver {
+    display: flex;
+    flex-direction: row;
+}
+
+h3, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.trip {
+  display: flex;
+  flex-direction: column;
+  /* border: black 2px solid; */
+  margin: 0 1.25rem;
+}
+
+.trip input {
+  margin-bottom: 1rem;
+}
+
+.client {
+    display: flex;
+    flex-direction: row;
+}
+
+.close-button {
+  display: flex;
+  justify-content: end;
+}
+
+dialog button {
+  width: 6rem;
+  padding: .5rem;
+}
+
+#map {
+  height: 100%;
+}
+
+img {
+  border-radius: 50%;
+  margin: 0.25rem;
+}

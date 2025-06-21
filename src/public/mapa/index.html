@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhamento do trajeto</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="first-screen">
+        <h1>CoMove - Compartilhe Mobilidade e Movimento Coletivo</h1>
+        <button id="open-modal">Exibir Acompanhamento do Trajeto</button>
+    </div>
+    <dialog>
+        <h1>Informações da viagem</h1>
+        <gmp-map center="-19.939004167293845,-44.076111519739385" zoom="18" map-id="DEMO_MAP_ID" style="height: 400px"></gmp-map>
+        <div id="map"></div>
+
+        <div class="main-info">
+            <div class="driver">
+                <div>
+                    <img src="./assets/img/37296322.jpeg" alt="" class="profile-photo">
+                </div>
+                <div>
+                    <h2 id="driver-name"></h2>
+                    <h3>Motorista</h3>
+                </div>
+            </div>
+
+            <div class="trip">
+                <h2>Local:</h2>
+                <input id="address-first" placeholder="PUC Minas - Contagem"></input>
+                <input id="address-second" placeholder="Sede principal - COMOVE"></input>
+            </div>
+
+            <div class="client">
+                <div>
+                    <img src="./assets/imG/37296322.jpeg" alt="" class="profile-photo">
+                </div>
+                <div>
+                    <h2 id="passenger-name"></h2>
+                    <h3>Passageiro</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="close-button">
+            <button id="close-button">Sair</button>
+        </div>
+
+    </dialog>
+</body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTE04gg5LzL0aeABwfAEo2hO4kZNcBa_M&libraries=places" async defer></script>
+<script src="./assets/js/scripts.js"></script>
+
+</html>
