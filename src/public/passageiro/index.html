@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoMoVe - Passageiro</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <style>
+    #map {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+    }
+    .carona-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .carona-card:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <header class="header d-flex justify-content-between align-items-center p-3">
+    <div class="header-left d-flex align-items-center">
+      <a href="index.html" class="logo-link">
+        <img src="imagens/logonegativa.png" alt="Logo CoMoVe" class="logo-img" />
+      </a>
+      <a href="historico.html" class="btn btn-light ms-3">Histórico</a>
+      <a href="regulamento.html" class="btn btn-light ms-2">Regulamento</a>
+    </div>
+  </header>
+
+  <main class="container mt-4">
+    <h2>Caronas Disponíveis</h2>
+    <div id="listaCaronas" class="mb-4"></div>
+
+    <h4>Adicionar parada</h4>
+    <form id="formDesvio" class="mb-3">
+      <input type="text" id="parada" placeholder="Digite sua parada" required class="form-control mb-2"/>
+      <button type="submit" class="btn btn-dark">Verificar desvio</button>
+    </form>
+
+    <div id="map"></div>
+</main>
+    <div class="informacoes-extras d-flex align-items-center justify-content-between">
+  <div class="texto">
+    <h2>Economize no trajeto para a faculdade</h2>
+    <p>Com o CoMoVe, as caronas são totalmente gratuitas</p>
+  </div>
+  <img src="imagens/carro_branco.png" alt="Carro branco" class="imagem-menor" />
+</div>
+
+<div class="regras-site d-flex align-items-center justify-content-between flex-row-reverse">
+  <div class="texto">
+    <h2>Regulamento</h2>
+    <p>Quer saber mais sobre as regras do CoMoVe? Clique no botão abaixo.</p>
+    <a href="regulamento.html" class="btn btn-light" id="botao-header">Saber mais</a>
+  </div>
+  <img src="imagens/estradaverde.png" alt="Estrada verde" class="imagem-menor" />
+</div>
+
+
+  <footer class="text-center py-3">
+    <p>CoMoVe, 2025 ©</p>
+  </footer>
+
+
+
+<!-- Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTE04gg5LzL0aeABwfAEo2hO4kZNcBa_M&libraries=places&callback=initMap" async defer></script>
+
+<!-- Scripts do seu frontend -->
+<script src="map.js"></script>
+<script type="module" src="app.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo da Carona</title>
+</head>
+<body>
+  <h1>Resumo da Carona</h1>
+  <p id="info"></p>
+
+  <script>
+    const dados = JSON.parse(localStorage.getItem('carona'));
+    if (dados) {
+      document.getElementById('info').innerText =
+        `Partida: ${dados.partida}\nDestino: ${dados.destino}\nHorário: ${dados.horario}`;
+    } else {
+      document.getElementById('info').innerText = 'Nenhuma carona encontrada.';
+    }
+  </script>
+</body>
+</html>

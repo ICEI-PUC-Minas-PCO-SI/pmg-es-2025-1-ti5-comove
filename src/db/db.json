@@ -1,12 +1,157 @@
 {
-    "usuarios": [
-        {
-            "username": "administrator",
-            "senha": 123
-        },
-        {
-            "username": "lucas.cunha",
-            "senha": "abcd"
-        }
-    ]
+  "caronas": [
+    {
+      "id": "1",
+      "partida": "Rua das Flores",
+      "destino": "Avenida Brasil",
+      "horario": "08:00",
+      "motoristaId": "2"
+    },
+    {
+      "id": "2",
+      "partida": "Praça Central",
+      "destino": "Shopping Center",
+      "horario": "14:30",
+      "motoristaId": "1"
+    },
+    {
+      "id": "107f",
+      "partida": "Rua Rio de Janeiro - Centro, Belo Horizonte - MG, Brasil",
+      "destino": "PUC Minas Coração Eucarístico - Rua Dom José Gaspar - Coração Eucarístico, Belo Horizonte - MG, Brasil",
+      "horario": "20:00",
+      "motoristaId": "2"
+    },
+    {
+      "id": "6b94",
+      "partida": "Rua Joaquim Gonçalves Pimenta - Camargos, Belo Horizonte - MG, Brasil",
+      "destino": "PUC Minas Coração Eucarístico - Rua Dom José Gaspar - Coração Eucarístico, Belo Horizonte - MG, Brasil",
+      "horario": "14:00",
+      "motoristaId": "2"
+    },
+    {
+      "id": "2467",
+      "partida": "Rua Lesandro Resende Franco - Camargos, Belo Horizonte - MG, Brasil",
+      "destino": "PUC Minas Contagem - Rua Rio Comprido - Cinco, Contagem - MG, Brasil",
+      "horario": "20:00",
+      "motoristaId": "2"
+    },
+    {
+      "id": "5745",
+      "partida": "Cinco, Contagem - MG, Brasil",
+      "destino": "PUC Minas Contagem - Rua Rio Comprido - Cinco, Contagem - MG, Brasil",
+      "horario": "13:00",
+      "motoristaId": "2"
+    },
+    {
+      "id": "d66c",
+      "partida": "RAAD'S - Rua dos Tupinambás - Centro, Belo Horizonte - MG, Brasil",
+      "destino": "PUC Minas Lourdes - Rua da Bahia - Lourdes, Belo Horizonte - MG, Brasil",
+      "horario": "20:00",
+      "motoristaId": 2
+    },
+    {
+      "id": "cfd5",
+      "partida": "MALETTA CRIATIVA - Avenida Augusto de Lima - Centro, Belo Horizonte - MG, Brasil",
+      "destino": "puc lourdes",
+      "horario": "20:00",
+      "motoristaId": 2
+    }
+  ],
+  "motorista": [
+    {
+      "id": "1",
+      "nome": "João Santos",
+      "carro": "Fiat Uno 2015",
+      "avaliacao": "4.5 ⭐"
+    },
+    {
+      "id": "2",
+      "nome": "Fulano da Silva",
+      "carro": "Gol G5 2013",
+      "avaliacao": "4.8 ⭐"
+    }
+  ],
+  "passageiros": [
+    {
+      "id": "1",
+      "nome": "Maria Silva",
+      "idade": 22,
+      "telefone": "(31) 99999-1234",
+      "email": "maria.silva@pucminas.br",
+      "instituicao": "PUC Barreiro",
+      "curso": "Engenharia de Produção",
+      "periodo": "5º período",
+      "turno": "Manhã",
+      "avaliacao": "4.8 ⭐"
+    },
+    {
+      "id": "2",
+      "nome": "Rafael Luiz",
+      "idade": 19,
+      "telefone": "(31) 98765-1234",
+      "email": "rafael.luiz@pucminas.br",
+      "instituicao": "PUC Contagem",
+      "curso": "Sistemas de informação",
+      "periodo": "2º período",
+      "turno": "Noite",
+      "avaliacao": "4.6 ⭐"
+    }
+  ],
+  "trip": [
+    {
+      "id": "t1",
+      "driverId": "2",
+      "passengerId": "1",
+      "initialPoint": "Rua das Flores",
+      "lastPoint": "Avenida Brasil",
+      "currentLocation": "Av. Amazonas, 1340 - Eldorado",
+      "status": "em andamento"
+    }
+  ],
+  "historicoCaronas": [
+    {
+      "id": "h1",
+      "motoristaId": "2",
+      "passageiroId": "1",
+      "partida": "Rua das Flores",
+      "destino": "Avenida Brasil",
+      "parada": "Rua do Comércio",
+      "data": "2025-06-21T08:00:00",
+      "status": "aceito",
+      "desvioAceito": true
+    },
+    {
+      "id": "h2",
+      "motoristaId": "1",
+      "passageiroId": "1",
+      "partida": "Praça Central",
+      "destino": "Shopping Center",
+      "parada": "Av. Amazonas",
+      "data": "2025-06-20T14:30:00",
+      "status": "recusado",
+      "desvioAceito": false
+    },
+    {
+      "id": "h1750628316102",
+      "motoristaId": "2",
+      "passageiroId": "1",
+      "partida": "Rua Joaquim Gonçalves Pimenta - Camargos, Belo Horizonte - MG, Brasil",
+      "destino": "PUC Minas Coração Eucarístico - Rua Dom José Gaspar - Coração Eucarístico, Belo Horizonte - MG, Brasil",
+      "parada": "Rua Lesandro Resende Franco - Camargos, Belo Horizonte - MG, Brasil",
+      "data": "2025-06-22T21:38:36.102Z",
+      "status": "aceito",
+      "desvioAceito": true
+    },
+    {
+      "id": "h1750631473125",
+      "motoristaId": 2,
+      "passageiroId": "1",
+      "partida": "RAAD'S - Rua dos Tupinambás - Centro, Belo Horizonte - MG, Brasil",
+      "destino": "PUC Minas Lourdes - Rua da Bahia - Lourdes, Belo Horizonte - MG, Brasil",
+      "parada": "MALETTA CRIATIVA - Avenida Augusto de Lima - Centro, Belo Horizonte - MG, Brasil",
+      "data": "2025-06-22T22:31:13.125Z",
+      "status": "aceito",
+      "desvioAceito": true
+    }
+  ]
 }

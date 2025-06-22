@@ -10,30 +10,26 @@
 <body>
   <header class="header d-flex justify-content-between align-items-center p-3">
     <div class="header-left d-flex align-items-center">
-    <a href="index.html" class="logo-link">
-  <img src="imagens/logonegativa.png" alt="Logo CoMoVe" class="logo-img" />
-</a>
-   <a href="regulamento.html" class="btn btn-light" id="botao-reg">Regulamento</a>
+      <a href="index.html" class="logo-link">
+        <img src="imagens/logonegativa.png" alt="Logo CoMoVe" class="logo-img" />
+      </a>
+      <a href="regulamento.html" class="btn btn-light" id="botao-reg">Regulamento</a>
     </div>
   </header>
 
   <main class="container my-5">
     <h2 class="mb-4">Histórico de Caronas</h2>
     <ul id="lista-caronas" class="list-group">
-      <!-- Itens serão inseridos via JavaScript -->
+      <!-- Itens são inseridos via JavaScript -->
     </ul>
-
-    <!-- Botão de voltar -->
     <button class="btn btn-primary mt-4" onclick="window.history.back()">Voltar</button>
   </main>
 
-  <!-- Script com tipo módulo para usar imports -->
-  <script type="module" src="app.js"></script>
-</body>
-
- <!-- Rodapé -->
   <footer class="text-center py-3">
     <p>CoMoVe, 2025 ©</p>
   </footer>
 
+  <script type="module" src="utils.js"></script>
+  <script type="module" src="historico.js"></script>
+</body>
 </html>

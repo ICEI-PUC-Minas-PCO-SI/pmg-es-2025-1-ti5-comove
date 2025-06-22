@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  overflow: hidden;
+}
+
+.logo-img {
+  max-height: 200px;
+  height: auto;
+  width: auto;
+}
+
+.logo-link:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Botão do cabeçalho */
+#botao-header {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  margin-left: 45px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#botao-header:hover {
+  background-color: #157d2a;
+}
+
+/* Layout principal */
+.layout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 40px;
+  color: #157d2a;
+}
+
+/* Formulário de criação de carona */
+.formulario {
+  background-color: rgba(22, 156, 40, 0.95);
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 40px;
+  font-size: 1.2rem;
+}
+
+.btn-success {
+  background-color: white;
+  color: rgba(22, 156, 40, 1);
+  font-size: 1.3rem;
+  padding: 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Mapa */
+#map {
+  flex: 2;
+  max-width: 700px;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Card com carona ativa */
+.card-carona {
+  background-color: #e0e0e0;
+  padding: 40px;
+  border-radius: 30px;
+  width: 300px;
+  margin: 40px;
+}
+
+.card-carona h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-carona .info input {
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+/* Sessão informativa inferior */
+.informacoes-extras,
+.regras-site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.informacoes-extras {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  flex-direction: row;
+  text-align: right;
+}
+
+.regras-site {
+  background-color: white;
+  color: rgba(22, 156, 40, 0.877);
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.imagem-menor {
+  width: 180px;
+  height: auto;
+}
+
+/* Rodapé */
+footer {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  margin-top: 50px;
+}
