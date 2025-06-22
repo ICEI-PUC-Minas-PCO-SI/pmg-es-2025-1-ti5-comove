@@ -1,25 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login - CoMoVe</title>
-
-    <link rel="stylesheet" href="./login.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página de Login - CoMoVe</title>
+  <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <div class="container">
-        <img src="../imagens/logoverdes.png" alt="Logo CoMoVe" id="logo">
+  <div class="container">
+    <img src="../imagens/logoverdes.png" alt="Logo CoMoVe" id="logo">
 
-        <form action="submit">
-            <label for="username">Usuário:</label>
-            <input type="text">
+    <!-- Formulário de Login -->
+    <form id="loginForm" onsubmit="fazerLogin(event)">
+      <label for="loginEmail">E-mail:</label>
+      <input type="email" id="loginEmail" required>
 
-            <label for="password">Senha:</label>
-            <input type="password">
+      <label for="password">Senha:</label>
+      <input type="password" id="password" required>
 
-            <button>ENTRAR</button>
-        </form>
-    </div>
+      <button type="submit">ENTRAR</button>
+      <button type="button" onclick="mostrarCadastro()">CADASTRAR</button>
+    </form>
+
+    <!-- Formulário de Cadastro -->
+    <form id="cadastroForm" style="display: none;" onsubmit="cadastrarUsuario(event)">
+      <h3>Cadastro</h3>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" required>
+
+      <label for="tipoUsuario">Tipo de Usuário:</label>
+      <select id="tipoUsuario" onchange="exibirCamposMotorista()" required>
+        <option value="">Selecione</option>
+        <option value="motorista">Motorista</option>
+        <option value="passageiro">Passageiro</option>
+      </select>
+
+      <div id="infoMotorista" style="display: none;">
+        <label for="carro">Carro:</label>
+        <input type="text" id="carro">
+
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa">
+      </div>
+
+      <button type="submit">Cadastrar</button>
+      <button type="button" onclick="voltarLogin()">Voltar</button>
+    </form>
+  </div>
+
+  <script>
+    function mostrarCadastro() {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("cadastroForm").style.display = "flex";
+    }
+
+    function voltarLogin() {
+      document.getElementById("cadastroForm").style.display = "none";
+      document.getElementById("loginForm").style.display = "flex";
+    }
+
+    function exibirCamposMotorista() {
+      const tipo = document.getElementById("tipoUsuario").value;
+      document.getElementById("infoMotorista").style.display = tipo === "motorista" ? "block" : "none";
+    }
+
+    function cadastrarUsuario(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const nome = document.getElementById("nome").value;
+      const idade = document.getElementById("idade").value;
+      const tipo = document.getElementById("tipoUsuario").value;
+      const senha = document.getElementById("senha").value;
+      const carro = document.getElementById("carro").value;
+      const placa = document.getElementById("placa").value;
+
+      if (!email.includes("@")) {
+        alert("O e-mail deve conter @");
+        return;
+      }
+
+      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+      const existe = usuarios.find(user => user.email === email);
+
+      if (existe) {
+        alert("Usuário já cadastrado!");
+        return;
+      }
+
+      const novoUsuario = { nome, email, idade, tipo, senha, carro, placa };
+      usuarios.push(novoUsuario);
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+      alert("Cadastro realizado com sucesso!");
+      voltarLogin(); // Só volta para o login, não redireciona ainda
+    }
+
+    function fazerLogin(event) {
+  event.preventDefault();
+  const emailLogin = document.getElementById("loginEmail").value.trim();
+  const senhaLogin = document.getElementById("password").value;
+
+  if (!emailLogin.includes("@")) {
+    alert("Digite um e-mail válido com @");
+    return;
+  }
+
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const usuario = usuarios.find(user => user.email === emailLogin);
+
+  if (!usuario) {
+    alert("Usuário não encontrado. Verifique se você se cadastrou.");
+    return;
+  }
+
+  if (usuario.senha !== senhaLogin) {
+    alert("Senha incorreta.");
+    return;
+  }
+
+  alert(`Bem-vindo(a), ${usuario.nome}!`);
+
+  // Redirecionamento correto
+  if (usuario.tipo === "motorista") {
+    window.location.href = "/src/public/Aba de criação de carona/PaginaMotorista.html";
+  } else {
+    window.location.href = "/src/public/index.html";
+  }
+}
+
+  </script>
 </body>
 </html>
