@@ -10,26 +10,18 @@
   <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <div class="logo-imagem"></div>   
-      <div class="logo-texto">
-        <h1>CoMoVe</h1>
-      </div>
-    </div>
-
-    <div class="menu d-flex align-items-center">
-      <ul class="d-flex align-items-center mb-0">
-        <li class="me-2"><a href="Menu.html">Menu Principal</a></li>
-        <li>
-          <a href="#" title="Perfil">
-            <i class="bi bi-person-circle fs-4"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
+  <header class="header d-flex justify-content-between align-items-center p-3">
+  <div class="header-left d-flex align-items-center">
+    <a href="motorista.html" class="logo-link">
+      <img src="/src/public/imagens/logonegativa.png" alt="Logo CoMoVe" class="logo-img" />
+    </a>
+  </div>
+  <div class="header-right d-flex align-items-center">
+    <a href="/src/public/Menu de pagamento/perfil.html" class="btn btn-light d-flex align-items-center" id="botao-perfil">
+      <i class="bi bi-person-circle me-2 fs-5"></i> Perfil
+    </a>
+  </div>
+</header>
   <main>
     <div class="container">
       <div class="formulario">
@@ -49,7 +41,7 @@
       </div>
     </div>
 
-    <a href="#" class="btn-voltar">Voltar</a>
+    
     <div class="info-section" id="dados-motorista"></div> 
   </main>
 
