@@ -132,11 +132,20 @@
   alert(`Bem-vindo(a), ${usuario.nome}!`);
 
   // Redirecionamento correto
+  if (usuario) {
+  alert(`Bem-vindo(a), ${usuario.nome}!`);
+
+  // Salva o usuário logado
+  localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+
+  // Redireciona
   if (usuario.tipo === "motorista") {
     window.location.href = "/src/public/Aba de criação de carona/PaginaMotorista.html";
   } else {
-    window.location.href = "/src/public/index.html";
+    window.location.href = "/src/public/popup/index.html";
   }
+}
+
 }
 
   </script>

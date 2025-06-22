@@ -35,6 +35,111 @@
     <p>CoMoVe, 2025 ©</p>
   </footer>
 
-  <script src="app.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Preview de imagem ou vídeo
+    document.querySelectorAll('.picture-input').forEach((inputFile) => {
+      const preview = inputFile.nextElementSibling;
+      const defaultText = 'Escolha um arquivo';
+      preview.textContent = defaultText;
+
+      inputFile.addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (!file) {
+          preview.textContent = defaultText;
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.addEventListener('load', function (e) {
+          const mediaUrl = e.target.result;
+          preview.innerHTML = '';
+
+          if (file.type.startsWith('image/')) {
+            const img = document.createElement('img');
+            img.src = mediaUrl;
+            preview.appendChild(img);
+          } else if (file.type.startsWith('video/')) {
+            const video = document.createElement('video');
+            video.src = mediaUrl;
+            video.controls = true;
+            preview.appendChild(video);
+          } else {
+            preview.textContent = 'Formato não suportado';
+          }
+        });
+
+        reader.readAsDataURL(file);
+      });
+    });
+
+    // Carrega dados do usuário logado
+    const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+    if (!usuario) {
+      alert("Usuário não logado.");
+      window.location.href = "/src/public/pagina-login/login.html";
+    } else {
+      const main = document.getElementById('conteudo-principal');
+      main.innerHTML = `
+  <div class="container-personalizada" id="perfil-container">
+    <h1><strong>Nome:</strong> <span id="nome">${usuario.nome}</span></h1>
+    <h1><strong>Email:</strong> <span id="email">${usuario.email}</span></h1>
+    <h1><strong>Idade:</strong> <span id="idade">${usuario.idade}</span></h1>
+    <h1><strong>Tipo:</strong> <span id="tipo">${usuario.tipo}</span></h1>
+    ${usuario.tipo === "motorista" ? `
+      <h1><strong>Carro:</strong> <span id="carro">${usuario.carro}</span></h1>
+      <h1><strong>Placa:</strong> <span id="placa">${usuario.placa}</span></h1>
+    ` : ""}
+    
+    <button id="editarPerfil" class="btn btn-success mt-3">Editar dados</button>
+  </div>
+`;
+document.getElementById("editarPerfil").addEventListener("click", () => {
+  const container = document.getElementById("perfil-container");
+  
+  const nome = document.getElementById("nome").textContent;
+  const idade = document.getElementById("idade").textContent;
+  const carro = usuario.tipo === "motorista" ? document.getElementById("carro").textContent : "";
+  const placa = usuario.tipo === "motorista" ? document.getElementById("placa").textContent : "";
+
+  // Formulário de edição
+  container.innerHTML = `
+    <h1><strong>Nome:</strong> <input id="edit-nome" value="${nome}"></h1>
+    <h1><strong>Email:</strong> ${usuario.email}</h1>
+    <h1><strong>Idade:</strong> <input id="edit-idade" value="${idade}"></h1>
+    <h1><strong>Tipo:</strong> ${usuario.tipo}</h1>
+    ${usuario.tipo === "motorista" ? `
+      <h1><strong>Carro:</strong> <input id="edit-carro" value="${carro}"></h1>
+      <h1><strong>Placa:</strong> <input id="edit-placa" value="${placa}"></h1>
+    ` : ""}
+    <button id="salvarPerfil" class="btn btn-primary mt-3">Salvar</button>
+  `;
+
+  // Botão salvar
+  document.getElementById("salvarPerfil").addEventListener("click", () => {
+    const novoNome = document.getElementById("edit-nome").value;
+    const novaIdade = document.getElementById("edit-idade").value;
+
+    usuario.nome = novoNome;
+    usuario.idade = novaIdade;
+
+    if (usuario.tipo === "motorista") {
+      usuario.carro = document.getElementById("edit-carro").value;
+      usuario.placa = document.getElementById("edit-placa").value;
+    }
+
+    // Atualiza no localStorage
+    localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+
+    // Recarrega a página para mostrar dados atualizados
+    location.reload();
+  });
+});
+
+    }
+  });
+</script>
+
 </body>
 </html>
