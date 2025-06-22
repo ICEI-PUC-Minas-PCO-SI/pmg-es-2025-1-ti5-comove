@@ -56,3 +56,22 @@ form select {
     margin-bottom: .5rem;
     border-radius: 4px;
 }
+
+#botao-perfil {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#botao-perfil:hover {
+  background-color: #157d2a;
+}
+
+body{
+    background-color: lightgreen;
+}

@@ -252,5 +252,20 @@ footer {
   margin-left: 10px;
 }
 
+#botao-perfil {
+  border: 2px solid white;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  color: white;
+  text-decoration: none;
+}
+
+#botao-perfil:hover {
+  background-color: white;
+  color: #169c28;
+}
+
 
 
