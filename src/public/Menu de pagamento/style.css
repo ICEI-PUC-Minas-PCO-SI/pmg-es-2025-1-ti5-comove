@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalho */
+header {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  overflow: hidden;
+}
+
+.logo-img {
+  max-height: 200px;
+  height: auto;
+  width: auto;
+}
+
+.logo-link:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+#botao-header,
+#botao-reg {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  margin-left: 20px;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#botao-header:hover,
+#botao-reg:hover {
+  background-color: #157d2a;
+}
+
+/* Formulário Motorista */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 50px;
+}
+
+.formulario {
+  background-color: #a5d36e;
+  padding: 50px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input {
+  border: none;
+  padding: 50px;
+  border-radius: 60px;
+  font-size: 1rem;
+}
+
+#criarCarona {
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  padding: 60px;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+/* Card de carona */
+.card-carona {
+  background-color: #e0e0e0;
+  padding: 40px;
+  border-radius: 30px;
+  width: 300px;
+}
+
+.card-carona h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-carona .info input {
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+/* Botão Voltar */
+.btn-voltar {
+  display: inline-block;
+  background-color: #a5d36e;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+/* Dados do motorista */
+#dados-motorista {
+  margin-top: 60px;
+  margin-left: 60px;
+  font-family: Arial, sans-serif; 
+  font-size: 1.8rem;              
+  font-weight: bold;              
+  color: #333;                    
+}
+
+/* Rodapé */
+footer {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  margin-top: 50px;
+}
+
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+.input-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.picture {
+  width: 300px;
+  height: 300px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  border: 2px dashed #aaa;
+  cursor: pointer;
+  font-family: sans-serif;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+}
+
+.picture-input {
+  display: none;
+}
+
+.picture-preview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.picture-preview img,
+.picture-preview video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+#conteudo-principal {
+  margin-left: 20%;  
+  margin-top: 40px;  
+  padding: 100px;
+  border-radius: 8px;
+  width: fit-content; 
+}
+
+footer {
+  background-color: rgba(22, 156, 40, 0.877);
+  color: white;
+  margin-top: 50px;
+}
+
+.container-personalizada {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+}
+
+.container-personalizada h1 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.container-personalizada h1:first-child {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1c7c36;
+}
+
+.container-personalizada h1:nth-child(4) {
+  margin-bottom: 30px;
+}
+
+.container-personalizada h1 span {
+  font-weight: normal;
+  color: #555;
+}
+
+.container-personalizada input {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+
+
