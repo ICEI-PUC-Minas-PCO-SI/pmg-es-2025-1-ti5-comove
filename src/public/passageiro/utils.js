@@ -1,9 +1,8 @@
-// utils.js
-
-// Busca todos os motoristas cadastrados
+// Busca todos os motoristas cadastrados no localStorage
 export async function buscarMotoristas() {
-  const res = await fetch("http://localhost:3000/motorista");
-  return await res.json();
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const motoristas = usuarios.filter(user => user.tipo === "motorista");
+  return motoristas;
 }
 
 // Formata datas em português (para histórico etc.)
@@ -17,6 +16,9 @@ export function mostrarErroNaPagina(mensagem) {
   const divErro = document.createElement("div");
   divErro.className = "alert alert-danger mt-3";
   divErro.textContent = mensagem;
+
   const form = document.getElementById("formDesvio");
-  form.parentNode.insertBefore(divErro, form.nextSibling);
+  if (form) {
+    form.parentNode.insertBefore(divErro, form.nextSibling);
+  }
 }

@@ -152,6 +152,17 @@
       "data": "2025-06-22T22:31:13.125Z",
       "status": "aceito",
       "desvioAceito": true
+    },
+    {
+      "id": "h1750636509154",
+      "motoristaId": 2,
+      "passageiroId": "1",
+      "partida": "MALETTA CRIATIVA - Avenida Augusto de Lima - Centro, Belo Horizonte - MG, Brasil",
+      "destino": "puc lourdes",
+      "parada": "R. Cel. Godofredo - Inconfidentes, Contagem - MG, Brasil",
+      "data": "2025-06-22T23:55:09.154Z",
+      "status": "recusado",
+      "desvioAceito": false
     }
   ]
 }

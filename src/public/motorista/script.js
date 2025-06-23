@@ -1,59 +1,57 @@
-const motoristaId = 2; // Simulando login
+// Ao carregar a página, verifica se tem usuário logado
+const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+if (!usuarioLogado || usuarioLogado.tipo !== "motorista") {
+  alert("Você precisa estar logado como motorista para acessar esta página.");
+  window.location.href = "/login.html"; // ajuste o caminho conforme seu projeto
+}
 
-// Buscar dados do motorista no backend
-fetch(`http://localhost:3000/motorista/${motoristaId}`)
-  .then(response => response.json())
-  .then(data => {
-    const infoSection = document.getElementById('dados-motorista');
-    infoSection.innerHTML = `
-      <h2>Motorista: ${data.nome}</h2>
-      <h2>Carro: ${data.carro}</h2>
-      <h2>Avaliação: ${data.avaliacao}</h2>
-    `;
-  })
-  .catch(error => {
-    console.error('Erro ao carregar dados do motorista:', error);
-  });
+// Preenche dados do motorista na página (se quiser exibir)
+const infoSection = document.getElementById('dados-motorista');
+if (infoSection && usuarioLogado) {
+  infoSection.innerHTML = `
+    <h2>Motorista: ${usuarioLogado.nome}</h2>
+    <h2>Carro: ${usuarioLogado.carro || 'Não informado'}</h2>
+  `;
+}
 
-// Envio da carona ao backend
-document.getElementById("formCarona").addEventListener("submit", function (e) {
+// Evento para enviar o formulário e salvar carona
+document.getElementById("formCarona").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const partida = document.getElementById("partida").value;
-  const destino = document.getElementById("destino").value;
-  const horario = document.getElementById("horario").value;
+  const partida = document.getElementById("partida").value.trim();
+  const destino = document.getElementById("destino").value.trim();
+  const horario = document.getElementById("horario").value.trim();
 
   if (!partida || !destino || !horario) {
     alert("Preencha todos os campos da carona.");
     return;
   }
 
+  // Pega as caronas do localStorage
+  const caronas = JSON.parse(localStorage.getItem("caronas") || "[]");
+
   const novaCarona = {
     partida,
     destino,
     horario,
-    motoristaId
+    motoristaEmail: usuarioLogado.email,
+    motoristaNome: usuarioLogado.nome,
+    id: Date.now() // id único simples
   };
 
-  fetch("http://localhost:3000/caronas", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(novaCarona),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      alert("Carona criada com sucesso!");
+  caronas.push(novaCarona);
+  localStorage.setItem("caronas", JSON.stringify(caronas));
 
-      document.getElementById('saidaInfo').value = partida;
-      document.getElementById('destinoInfo').value = destino;
-      document.getElementById('horarioInfo').value = horario;
-      document.getElementById('cardCarona').style.display = 'block';
+  alert("Carona criada com sucesso!");
+  this.reset();
 
-      document.getElementById("formCarona").reset();
-    })
-    .catch((err) => {
-      console.error("Erro ao salvar carona:", err);
-    });
+  mostrarCaronaNaPagina(novaCarona);
 });
+
+function mostrarCaronaNaPagina(carona) {
+  const cardCarona = document.getElementById('cardCarona');
+  document.getElementById('saidaInfo').value = carona.partida;
+  document.getElementById('destinoInfo').value = carona.destino;
+  document.getElementById('horarioInfo').value = carona.horario;
+  cardCarona.style.display = 'block';
+}
