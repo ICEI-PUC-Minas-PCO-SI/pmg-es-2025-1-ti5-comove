@@ -34,6 +34,8 @@ document.getElementById("formCarona").addEventListener("submit", function(e) {
     partida,
     destino,
     horario,
+    data,
+    vagas,
     motoristaEmail: usuarioLogado.email,
     motoristaNome: usuarioLogado.nome,
     id: Date.now() // id único simples
