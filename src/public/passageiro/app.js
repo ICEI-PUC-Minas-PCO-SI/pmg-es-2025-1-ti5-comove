@@ -1,4 +1,3 @@
-// app.js (página index/passageiro)
 import { mostrarErroNaPagina } from "./utils.js";
 
 let caronas = [];
@@ -23,7 +22,45 @@ function carregarCaronas() {
     return;
   }
 
-  caronas.forEach((carona, index) => {
+  // Verifica se o checkbox está marcado
+  const somenteFeminino = document.getElementById("filtroFeminino")?.checked;
+
+  const caronasFiltradas = caronas.filter((carona) => {
+    if (somenteFeminino) {
+      return carona.motoristaGenero === "feminino";
+    }
+    return true;
+  });
+
+  // Verifica alertas salvos
+  const alertas = JSON.parse(localStorage.getItem("alertasCarona") || "[]");
+  const correspondentes = [];
+
+  caronasFiltradas.forEach((carona) => {
+    const caronaPartida = carona.partida.toLowerCase();
+    const caronaDestino = carona.destino.toLowerCase();
+
+    const match = alertas.some(alerta => {
+      return (
+        caronaPartida.includes(alerta.partida) &&
+        caronaDestino.includes(alerta.destino)
+      );
+    });
+
+    if (match) {
+      correspondentes.push(carona);
+    }
+  });
+
+  if (correspondentes.length > 0) {
+    const aviso = document.createElement("div");
+    aviso.className = "alert alert-info";
+    aviso.innerText = `Há ${correspondentes.length} carona(s) parecida(s) com seu alerta!`;
+    lista.appendChild(aviso);
+  }
+
+  // Exibir caronas filtradas
+  caronasFiltradas.forEach((carona, index) => {
     const card = document.createElement("div");
     card.className = "card mb-3 p-3 carona-card";
     card.style.maxWidth = "500px";
@@ -75,12 +112,13 @@ function calcularRotasComDesvio(origem, destino, parada) {
 
       const dadosHistorico = {
         id: "h" + Date.now(),
-        motoristaId: caronaSelecionada.motoristaId,
-        passageiroId: passageiro?.email || "desconhecido",
+        motoristaEmail: caronaSelecionada.motoristaEmail || "desconhecido",
+        motoristaNome: caronaSelecionada.motoristaNome || "desconhecido",
+        passageiroEmail: passageiro?.email || "desconhecido",
         partida: origem,
         destino: destino,
         parada: parada,
-        data: new Date().toISOString(),
+        data: caronaSelecionada.data || new Date().toISOString(),
         status: dentroDoLimite ? "aceito" : "recusado",
         desvioAceito: dentroDoLimite
       };
@@ -109,3 +147,20 @@ document.getElementById("formDesvio").addEventListener("submit", function (e) {
 });
 
 window.onload = carregarCaronas;
+
+// Formulário de criação de alerta
+document.getElementById("formAlerta").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const partida = document.getElementById("alertaPartida").value.trim().toLowerCase();
+  const destino = document.getElementById("alertaDestino").value.trim().toLowerCase();
+
+  const alertas = JSON.parse(localStorage.getItem("alertasCarona") || "[]");
+  alertas.push({ partida, destino });
+  localStorage.setItem("alertasCarona", JSON.stringify(alertas));
+
+  alert("Alerta criado com sucesso!");
+  this.reset();
+});
+
+// Filtro feminino
+document.getElementById("filtroFeminino")?.addEventListener("change", carregarCaronas);

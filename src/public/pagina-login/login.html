@@ -35,6 +35,15 @@
       <label for="idade">Idade:</label>
       <input type="number" id="idade" required>
 
+      <label for="genero">Gênero:</label>
+      <select id="genero" required>
+      <option value="">Selecione</option>
+      <option value="feminino">Feminino</option>
+      <option value="masculino">Masculino</option>
+      <option value="outro">Outro</option>
+</select>
+
+
       <label for="senha">Senha:</label>
       <input type="password" id="senha" required>
 
@@ -80,6 +89,7 @@
       const email = document.getElementById("email").value;
       const nome = document.getElementById("nome").value;
       const idade = document.getElementById("idade").value;
+      const genero = document.getElementById("genero").value;
       const tipo = document.getElementById("tipoUsuario").value;
       const senha = document.getElementById("senha").value;
       const carro = document.getElementById("carro").value;
@@ -98,7 +108,7 @@
         return;
       }
 
-      const novoUsuario = { nome, email, idade, tipo, senha, carro, placa };
+      const novoUsuario = { nome, email, idade, tipo, senha, carro, placa, genero };
       usuarios.push(novoUsuario);
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
@@ -145,7 +155,6 @@
     window.location.href = "/src/public/passageiro/index.html";
   }
 }
-
 }
 
   </script>

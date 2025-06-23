@@ -32,14 +32,32 @@
       <a href="index.html" class="logo-link">
         <img src="imagens/logonegativa.png" alt="Logo CoMoVe" class="logo-img" />
       </a>
-      <a href="historico.html" class="btn btn-light ms-3">Histórico</a>
-      <a href="regulamento.html" class="btn btn-light ms-2">Regulamento</a>
+      </a>
+      <a href="historico.html" class="btn btn-light ms-3" id="botao-header" >Histórico</a>
+      <a href="regulamento.html" class="btn btn-light ms-2" id = "botao-header">Regulamento</a>
     </div>
   </header>
 
   <main class="container mt-4">
     <h2>Caronas Disponíveis</h2>
     <div id="listaCaronas" class="mb-4"></div>
+
+    <div id="alertaDeCarona" class="mb-4">
+  <p>Não encontrou a carona que você quer? <strong>Crie um alerta!</strong></p>
+  <form id="formAlerta" class="mb-3">
+    <input type="text" id="alertaPartida" class="form-control mb-2" placeholder="Partida desejada" required>
+    <input type="text" id="alertaDestino" class="form-control mb-2" placeholder="Destino desejado" required>
+    <button class="btn btn-warning">Criar Alerta</button>
+  </form>
+</div>
+
+
+    <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" id="filtroFeminino">
+    <label class="form-check-label" for="filtroFeminino">
+      Mostrar apenas caronas com motoristas mulheres
+  </label>
+</div>
 
     <h4>Adicionar parada</h4>
     <form id="formDesvio" class="mb-3">
@@ -64,6 +82,14 @@
     <a href="regulamento.html" class="btn btn-light" id="botao-header">Saber mais</a>
   </div>
   <img src="imagens/estradaverde.png" alt="Estrada verde" class="imagem-menor" />
+</div>
+
+   <div class="informacoes-extras d-flex align-items-center justify-content-between">
+  <div class="texto">
+    <h2>Você segura com o CoMoVe</h2>
+    <p>Agora temos o filtro que seleciona apenas caronas com mulheres</p>
+  </div>
+  <img src="imagens/branco.png" alt="Carro branco" class="imagem-menor" />
 </div>
 
 

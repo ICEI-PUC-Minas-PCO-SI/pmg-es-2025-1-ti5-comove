@@ -25,61 +25,64 @@
       <a href="PaginaMotorista.html" class="logo-link">
         <img src="imagens/logonegativa.png" alt="Logo CoMoVe" class="logo-img" />
       </a>
-      <a href="regulamento.html" class="btn btn-light ms-2">Regulamento</a>
+      <a href="regulamento.html" class="btn btn-light" id="botao-header">Regulamento</a>
+      </a>
+      <a href="carona.html" class="btn btn-light" id="botao-header">Histórico</a>
+    </div>
     </div>
     <div class="menu d-flex align-items-center">
       <ul class="d-flex align-items-center mb-0">
         <li>
-  <a href="/src/public/Menu de pagamento/perfil.html" class="btn btn-outline-light d-flex align-items-center" id="botao-perfil">
-    <i class="bi bi-person-circle me-2 fs-5"></i> Perfil
-  </a>
-</li>
-
+          <a href="/src/public/Menu de pagamento/perfil.html" class="btn btn-outline-light d-flex align-items-center" id="botao-perfil">
+            <i class="bi bi-person-circle me-2 fs-5"></i> Perfil
+          </a>
+        </li>
       </ul>
     </div>
   </header>
 
- <main>
-  <div class="layout-container">
- <form id="formCarona" class="formulario my-3">
-  <input type="text" id="partida" placeholder="Partida" class="form-control mb-2" required>
-  <input type="text" id="destino" placeholder="Destino" class="form-control mb-2" required>
-  <input type="text" id="horario" placeholder="Horário da Carona" class="form-control mb-2" required>
-  <input type="datetime-local" id="data" placeholder="Data da Carona" class="form-control mb-2" required>
-  <input type="number" id="vagas" placeholder="Número de Passageiros" class="form-control mb-2" min="1" max="10" required>
-  <button type="submit" class="btn btn-success w-100">CRIAR CARONA</button>
-</form>
+  <main>
+    <div class="layout-container">
+      <form id="formCarona" class="formulario my-3">
+        <input type="text" id="partida" placeholder="Partida" class="form-control mb-2" required>
+        <input type="text" id="destino" placeholder="Destino" class="form-control mb-2" required>
+        <input type="datetime-local" id="data" placeholder="Data da Carona" class="form-control mb-2" required>
+        <input type="number" id="vagas" placeholder="Número de Passageiros" class="form-control mb-2" min="1" max="10" required>
+        <button type="submit" class="btn btn-success w-100">CRIAR CARONA</button>
+      </form>
 
-    <div id="map"></div>
-  </div>
-
-  <div class="card-carona" id="cardCarona" style="display: none;">
-    <div id="listaCaronas" class="container mt-5"></div>
-    <h2>Carona Ativa</h2>
-    <div class="info">
-      <input type="text" id="saidaInfo" readonly>
-      <input type="text" id="destinoInfo" readonly>
-      <input type="text" id="horarioInfo" readonly>
+      <div id="map"></div>
     </div>
-  </div>
-</main>
 
-<div class="informacoes-extras d-flex align-items-center justify-content-between">
-  <div class="texto">
-    <h2>Economize no trajeto para a faculdade</h2>
-    <p>Com o CoMoVe, as caronas são totalmente gratuitas</p>
-  </div>
-  <img src="imagens/carro_branco.png" alt="Carro branco" class="imagem-menor" />
-</div>
+    <div class="card-carona" id="cardCarona" style="display: none;">
+      <div id="listaCaronas" class="container mt-5"></div>
+      <h2>Carona Ativa</h2>
+      <div class="info">
+        <input type="text" id="saidaInfo" readonly>
+        <input type="text" id="destinoInfo" readonly>
+        <input type="text" id="dataInfo" readonly>
+      </div>
+    </div>
+  </main>
 
-<div class="regras-site d-flex align-items-center justify-content-between flex-row-reverse">
-  <div class="texto">
-    <h2>Regulamento</h2>
-    <p>Quer saber mais sobre as regras do CoMoVe? Clique no botão abaixo.</p>
-    <a href="regulamento.html" class="btn btn-light" id="botao-header">Saber mais</a>
+  <div class="informacoes-extras d-flex align-items-center justify-content-between">
+    <div class="texto">
+      <h2>Economize no trajeto para a faculdade</h2>
+      <p>Com o CoMoVe, as caronas são totalmente gratuitas</p>
+    </div>
+    <img src="imagens/carro_branco.png" alt="Carro branco" class="imagem-menor" />
   </div>
-  <img src="imagens/estradaverde.png" alt="Estrada verde" class="imagem-menor" />
-</div>
+
+  <div class="regras-site d-flex align-items-center justify-content-between flex-row-reverse">
+    <div class="texto">
+      <h2>Regulamento</h2>
+      <p>Quer saber mais sobre as regras do CoMoVe? Clique no botão abaixo.</p>
+      <a href="regulamento.html" class="btn btn-light" id="botao-header">Saber mais</a>
+    </div>
+    <a href="caronas.html" class="btn btn-outline-light ms-2">Minhas Caronas</a>
+
+    <img src="imagens/estradaverde.png" alt="Estrada verde" class="imagem-menor" />
+  </div>
 
   <footer class="text-center py-3">
     <p>CoMoVe, 2025 ©</p>

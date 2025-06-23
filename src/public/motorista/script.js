@@ -20,9 +20,10 @@ document.getElementById("formCarona").addEventListener("submit", function(e) {
 
   const partida = document.getElementById("partida").value.trim();
   const destino = document.getElementById("destino").value.trim();
-  const horario = document.getElementById("horario").value.trim();
+  const data = document.getElementById('data').value;
+  const vagas = parseInt(document.getElementById('vagas').value);
 
-  if (!partida || !destino || !horario) {
+  if (!partida || !destino || !data || isNaN(vagas)) {
     alert("Preencha todos os campos da carona.");
     return;
   }
@@ -33,11 +34,11 @@ document.getElementById("formCarona").addEventListener("submit", function(e) {
   const novaCarona = {
     partida,
     destino,
-    horario,
     data,
     vagas,
     motoristaEmail: usuarioLogado.email,
     motoristaNome: usuarioLogado.nome,
+    motoristaGenero: usuarioLogado.genero,
     id: Date.now() // id único simples
   };
 
@@ -54,6 +55,18 @@ function mostrarCaronaNaPagina(carona) {
   const cardCarona = document.getElementById('cardCarona');
   document.getElementById('saidaInfo').value = carona.partida;
   document.getElementById('destinoInfo').value = carona.destino;
-  document.getElementById('horarioInfo').value = carona.horario;
+  document.getElementById('dataInfo').value = formatarDataHora(carona.data);
   cardCarona.style.display = 'block';
 }
+
+function formatarDataHora(valorISO) {
+  const data = new Date(valorISO);
+  const dia = String(data.getDate()).padStart(2, '0');
+  const mes = String(data.getMonth() + 1).padStart(2, '0');
+  const ano = data.getFullYear();
+  const hora = String(data.getHours()).padStart(2, '0');
+  const minutos = String(data.getMinutes()).padStart(2, '0');
+
+  return `${dia}/${mes}/${ano} ${hora}:${minutos}`;
+}
+

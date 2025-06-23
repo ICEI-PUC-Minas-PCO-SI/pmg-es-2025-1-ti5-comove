@@ -150,6 +150,83 @@ header {
   height: auto;
 }
 
+/*>>>>>>>>>>> SOBRE NÓS <<<<<<<<<<<*/
+
+  .regulamento{
+  color: rgba(22, 156, 40, 0.877);
+  margin-top: 30px;
+  text-align: center;
+}
+
+ .regras-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.regras-container .texto {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.regras-container .imagem {
+  flex-shrink: 0;
+}
+
+.imagem-menor {
+  width: 180px;
+  height: auto;
+}
+
+
+ .passageiro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.passageiro-container .texto {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.passageiro-container .imagem {
+  flex-shrink: 0;
+}
+
+/*motorista*/
+
+ .motorista-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.motorista-container .texto {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.motorista-container .imagem {
+  flex-shrink: 0;
+}
+
+
 /* Rodapé */
 footer {
   background-color: rgba(22, 156, 40, 0.877);
