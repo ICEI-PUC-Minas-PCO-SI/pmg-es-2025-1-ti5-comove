@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Página de Login - CoMoVe</title>
-  <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" href="pagina-login/login.css">
 </head>
 <body>
   <div class="container">
-    <img src="/src/public/motorista/imagens/logonegativa.png" alt="Logo CoMoVe" id="logo">
+    <img src="motorista/imagens/logonegativa.png" alt="Logo CoMoVe" id="logo">
 
     <!-- Formulário de Login -->
     <form id="loginForm" onsubmit="fazerLogin(event)">
@@ -37,12 +37,11 @@
 
       <label for="genero">Gênero:</label>
       <select id="genero" required>
-      <option value="">Selecione</option>
-      <option value="feminino">Feminino</option>
-      <option value="masculino">Masculino</option>
-      <option value="outro">Outro</option>
-</select>
-
+        <option value="">Selecione</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="outro">Outro</option>
+      </select>
 
       <label for="senha">Senha:</label>
       <input type="password" id="senha" required>
@@ -113,50 +112,41 @@
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
       alert("Cadastro realizado com sucesso!");
-      voltarLogin(); // Só volta para o login, não redireciona ainda
+      voltarLogin();
     }
 
     function fazerLogin(event) {
-  event.preventDefault();
-  const emailLogin = document.getElementById("loginEmail").value.trim();
-  const senhaLogin = document.getElementById("password").value;
+      event.preventDefault();
+      const emailLogin = document.getElementById("loginEmail").value.trim();
+      const senhaLogin = document.getElementById("password").value;
 
-  if (!emailLogin.includes("@")) {
-    alert("Digite um e-mail válido com @");
-    return;
-  }
+      if (!emailLogin.includes("@")) {
+        alert("Digite um e-mail válido com @");
+        return;
+      }
 
-  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-  const usuario = usuarios.find(user => user.email === emailLogin);
+      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+      const usuario = usuarios.find(user => user.email === emailLogin);
 
-  if (!usuario) {
-    alert("Usuário não encontrado. Verifique se você se cadastrou.");
-    return;
-  }
+      if (!usuario) {
+        alert("Usuário não encontrado. Verifique se você se cadastrou.");
+        return;
+      }
 
-  if (usuario.senha !== senhaLogin) {
-    alert("Senha incorreta.");
-    return;
-  }
+      if (usuario.senha !== senhaLogin) {
+        alert("Senha incorreta.");
+        return;
+      }
 
-  alert(`Bem-vindo(a), ${usuario.nome}!`);
+      alert(`Bem-vindo(a), ${usuario.nome}!`);
+      localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
 
-  // Redirecionamento correto
-  if (usuario) {
-  alert(`Bem-vindo(a), ${usuario.nome}!`);
-
-  // Salva o usuário logado
-  localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
-
-  // Redireciona
-  if (usuario.tipo === "motorista") {
-    window.location.href = "/src/public/motorista/PaginaMotorista.html";
-  } else {
-    window.location.href = "/src/public/passageiro/index.html";
-  }
-}
-}
-
+      if (usuario.tipo === "motorista") {
+        window.location.href = "motorista/PaginaMotorista.html";
+      } else {
+        window.location.href = "passageiro/index.html";
+      }
+    }
   </script>
 </body>
 </html>

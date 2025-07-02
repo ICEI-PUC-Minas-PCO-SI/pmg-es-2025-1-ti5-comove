@@ -1,7 +1,7 @@
 const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
 if (!usuario || usuario.tipo !== "motorista") {
   alert("Você precisa estar logado como motorista.");
-  window.location.href = "/login.html";
+  window.location.href = "/";
 }
 
 let caronas = JSON.parse(localStorage.getItem("caronas") || "[]");

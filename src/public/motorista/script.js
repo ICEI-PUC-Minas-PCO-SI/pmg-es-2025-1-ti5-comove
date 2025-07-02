@@ -2,7 +2,7 @@
 const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
 if (!usuarioLogado || usuarioLogado.tipo !== "motorista") {
   alert("Você precisa estar logado como motorista para acessar esta página.");
-  window.location.href = "/login.html"; // ajuste o caminho conforme seu projeto
+  window.location.href = "/"; // ajuste o caminho conforme seu projeto
 }
 
 // Preenche dados do motorista na página (se quiser exibir)
